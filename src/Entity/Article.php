@@ -30,7 +30,7 @@ class Article
     #[ORM\Column(type: 'integer')]
     private $nombreVues;
 
-    #[ORM\ManyToOne(targetEntity: Categorie::class, inversedBy: 'articles')]
+    #[ORM\ManyToOne(targetEntity: Categorie::class, inversedBy: 'articles', cascade: ["persist"])]
     #[ORM\JoinColumn(nullable: false)]
     private $categorie;
 

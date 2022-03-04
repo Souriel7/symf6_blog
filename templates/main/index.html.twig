@@ -10,7 +10,7 @@
 <p>Catégorie : {{ article.categorie.nom }}</p>
 <p>Nombre de vues : {{ article.nombreVues }}</p>
 <p>{{ article.contenu }}</p>
-
+<a href="{{ path('app_articles_id', {id: article.id} ) }}">Lire la suite</a>
 {% endfor %}
 
 {% endblock %}

@@ -43,7 +43,7 @@ class AppFixtures extends Fixture
         for ($i = 1; $i <= 3; $i++) {
             $cat = new Categorie();
             $cat->setNom("Nouvelle categorie " . $i);
-            $manager->persist($cat);
+            // $manager->persist($cat);
             // on crée des articles
             for ($j = 1; $j <= 5; $j++) {
                 $article = new Article();
