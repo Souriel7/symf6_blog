@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Main{% endblock %}
+
+{% block body %}
+<h1>Main</h1>
+
+{% for article in articles %}
+<h2>{{ article.titre }} du {{ article.datePublication|date("d/m/Y") }} rédigé par {{ article.user.pseudo }}</h2>
+<p>Catégorie : {{ article.categorie.nom }}</p>
+<p>Nombre de vues : {{ article.nombreVues }}</p>
+<p>{{ article.contenu }}</p>
+<a href="{{ path('app_articles_id', {id: article.id} ) }}">Lire la suite</a>
+{% endfor %}
+
+{% endblock %}
