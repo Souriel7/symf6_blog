@@ -9,6 +9,9 @@
 <p><img src="../images/{{ article.imageSrc }}" alt=""></p>
 <p>Contenu de l'article : <br> {{ article.contenu }}</p>
 
+<h2>Rédigez votre commentaire</h2>
+{{ form(commForm) }}
+
 <h2>Commentaires</h2>
 {% for commentaire in article.commentaires %}
 {% if commentaire.publie %}
