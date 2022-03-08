@@ -44,6 +44,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->commentaires = new ArrayCollection();
     }
 
+    public function getUsername(): string
+    {
+        return $this->pseudo;
+    }
+
     public function getId(): ?int
     {
         return $this->id;

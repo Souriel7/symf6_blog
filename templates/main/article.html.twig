@@ -9,8 +9,10 @@
 <p><img src="../images/{{ article.imageSrc }}" alt=""></p>
 <p>Contenu de l'article : <br> {{ article.contenu }}</p>
 
+{% if app.user %}
 <h2>Rédigez votre commentaire</h2>
 {{ form(commForm) }}
+{% endif %}
 
 <h2>Commentaires</h2>
 {% for commentaire in article.commentaires %}
